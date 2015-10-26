@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.yattasolutions.uml.diagrams.classifier:ClassDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.yattasolutions.uml.diagrams.classifier="http://ns.yatta-solutions.com/umllab/diagrams/classifier/1.1.0" xmi:id="_XP_sQHwdEeWWepdqby906w">
+  <modelElement href="EShop2.uml#_W5KgoHwdEeWWepdqby906w"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_Y7MCwHwdEeWWepdqby906w" source="_Y7MCyXwdEeWWepdqby906w">
+    <modelElement href="EShop2.uml#_XHXUsXwdEeWWepdqby906w"/>
+    <visualProperties xmi:id="_Y7OfAHwdEeWWepdqby906w" position="70.0,70.0"/>
+    <stereotypes xmi:id="_Y7MCwXwdEeWWepdqby906w" name="Reference">
+      <modelElement href="EShop2.uml#_XHa_EHwdEeWWepdqby906w"/>
+    </stereotypes>
+    <nameVisual xmi:id="_Y7MCwnwdEeWWepdqby906w" text=""/>
+    <sourceRole xmi:id="_Y7MCw3wdEeWWepdqby906w" aggregationKind="NONE" name="">
+      <modelElement href="EShop2.uml#_XHXUsnwdEeWWepdqby906w"/>
+      <visibility xmi:id="_Y7MCxHwdEeWWepdqby906w" label="+"/>
+      <cardinality xmi:id="_Y7MCxXwdEeWWepdqby906w" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_Y7MCxnwdEeWWepdqby906w" aggregationKind="NONE" name="sessionFactory" navigable="true">
+      <modelElement href="EShop2.uml#_XF8YYHwdEeWWepdqby906w"/>
+      <visibility xmi:id="_Y7MCx3wdEeWWepdqby906w" label="-"/>
+      <cardinality xmi:id="_Y7MCyHwdEeWWepdqby906w" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_Y7MCyXwdEeWWepdqby906w" name="HibernateUtil" associationsOut="_Y7MCwHwdEeWWepdqby906w">
+    <modelElement href="EShop2.uml#_W8orYHwdEeWWepdqby906w"/>
+    <visualProperties xmi:id="_Y7MCynwdEeWWepdqby906w" position="50.0,50.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_Y7MCy3wdEeWWepdqby906w" label="+"/>
+    <attributes xmi:id="_Y7MCzHwdEeWWepdqby906w" name="sessionFactory" staticAttribute="true">
+      <modelElement href="EShop2.uml#_XF8YYHwdEeWWepdqby906w"/>
+      <visibility xmi:id="_Y7MCzXwdEeWWepdqby906w" label="-"/>
+      <cardinality xmi:id="_Y7MCznwdEeWWepdqby906w" label="1" max="1" min="1"/>
+      <type xmi:id="_Y7MCz3wdEeWWepdqby906w" name="SessionFactory">
+        <modelElement href="EShop2.uml#_XChQ8HwdEeWWepdqby906w"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_Y7MC0HwdEeWWepdqby906w" name="_initializer1" staticOperation="true">
+      <modelElement href="EShop2.uml#_W8pScHwdEeWWepdqby906w"/>
+      <keywords xmi:id="_Y7MC0XwdEeWWepdqby906w" keyword="init"/>
+      <stereotypes xmi:id="_Y7MC0nwdEeWWepdqby906w" name="LegacyStyledElement">
+        <modelElement href="EShop2.uml#_W8pSc3wdEeWWepdqby906w"/>
+      </stereotypes>
+      <visibility xmi:id="_Y7MC03wdEeWWepdqby906w" label="+"/>
+      <cardinality xmi:id="_Y7MC1HwdEeWWepdqby906w" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_Y7MC1XwdEeWWepdqby906w" name="getSessionFactory" staticOperation="true">
+      <modelElement href="EShop2.uml#_W8pSdHwdEeWWepdqby906w"/>
+      <visibility xmi:id="_Y7MC1nwdEeWWepdqby906w" label="+"/>
+      <cardinality xmi:id="_Y7MC13wdEeWWepdqby906w" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_Y7MC2HwdEeWWepdqby906w">
+        <modelElement href="EShop2.uml#_XD80UHwdEeWWepdqby906w"/>
+        <type xmi:id="_Y7MC2XwdEeWWepdqby906w" name="SessionFactory">
+          <modelElement href="EShop2.uml#_XChQ8HwdEeWWepdqby906w"/>
+        </type>
+      </outParameters>
+    </operations>
+  </nodes>
+</com.yattasolutions.uml.diagrams.classifier:ClassDiagram>
