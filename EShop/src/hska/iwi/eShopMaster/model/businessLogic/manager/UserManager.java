@@ -1,12 +1,14 @@
 package hska.iwi.eShopMaster.model.businessLogic.manager;
 
+import java.util.List;
+
 import hska.iwi.eShopMaster.model.database.dataobjects.Role;
 import hska.iwi.eShopMaster.model.database.dataobjects.User;
 
 
 public interface UserManager {
     
-    public void registerUser(String username, String name, String lastname, String password, Role role);
+	public void registerUser(String username, String name, String lastname, String password, Role role);
     
     public User getUserByUsername(String username);
     
@@ -15,4 +17,6 @@ public interface UserManager {
     public Role getRoleByLevel(int level);
     
     public boolean doesUserAlreadyExist(String username);
+    
+    public List<User> getAllUsers();
 }

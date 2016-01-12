@@ -1,50 +1,15 @@
 package hska.iwi.eShopMaster.model.database.dataobjects;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class User {
 
-/**
- * This class contains the users of the webshop.
- */
-@Entity
-@Table(name = "Customer")
-public class User implements java.io.Serializable {
-
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-
-
-	@Id
-	@GeneratedValue
-	@Column(name = "id", nullable = false)
 	private int id;
-
-	
-	@Column(name = "username", unique = true, nullable = false)
 	private String username;
-
-	
-	@Column(name = "name", nullable = false)
 	private String firstname;
-
-	
-	@Column(name = "lastname", nullable = false)
 	private String lastname;
-
-	
-	@Column(name = "password", nullable = false)
 	private String password;
-
-	@ManyToOne()
-	@JoinColumn(name = "role", nullable = false)	
 	private Role role;
 
 	public User() {
@@ -106,5 +71,12 @@ public class User implements java.io.Serializable {
 	public void setRole(Role role) {
 		this.role = role;
 	}
-
+	
+//    @Override
+//    public String toString() {
+//        return "Quote{" +
+//                "type='" + type + '\'' +
+//                ", value=" + value +
+//                '}';
+//    }
 }
