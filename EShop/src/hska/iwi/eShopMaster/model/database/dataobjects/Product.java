@@ -1,58 +1,45 @@
 package hska.iwi.eShopMaster.model.database.dataobjects;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class Product {
 
-/**
- * This class contains details about products.
- */
-@Entity
-@Table(name = "product")
-public class Product implements java.io.Serializable {
-
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-
-	@Id
-	@GeneratedValue
-	@Column(name = "id", nullable = false)
 	private int id;
-
-	@Column(name = "name")
 	private String name;
-
-	@Column(name = "price")
 	private double price;
-
-	
-	@ManyToOne
-	@JoinColumn(name = "category_id")
-	private Category category;
-
-	@Column(name = "details")
+	private Category categoryClass;
+	private int category;
 	private String details;
 
 	public Product() {
 	}
 
-	public Product(String name, double price, Category category) {
+	public Product(String name, double price, int category) {
 		this.name = name;
 		this.price = price;
 		this.category = category;
 	}
-
-	public Product(String name, double price, Category category, String details) {
+	
+	public Product(String name, double price, int category, Category categoryClass) {
 		this.name = name;
 		this.price = price;
 		this.category = category;
+		this.categoryClass = categoryClass;
+	}
+
+	public Product(String name, double price, int category, String details) {
+		this.name = name;
+		this.price = price;
+		this.category = category;
+		this.details = details;
+	}
+	
+	public Product(String name, double price, int category, Category categoryClass, String details) {
+		this.name = name;
+		this.price = price;
+		this.category = category;
+		this.categoryClass = categoryClass;
 		this.details = details;
 	}
 
@@ -79,12 +66,12 @@ public class Product implements java.io.Serializable {
 	public void setPrice(double price) {
 		this.price = price;
 	}
-
-	public Category getCategory() {
-		return this.category;
+	
+	public int getCategory() {
+	return this.category;
 	}
 
-	public void setCategory(Category category) {
+	public void setCategory(int category) {
 		this.category = category;
 	}
 
@@ -94,6 +81,14 @@ public class Product implements java.io.Serializable {
 
 	public void setDetails(String details) {
 		this.details = details;
+	}
+
+	public Category getCategoryClass() {
+		return this.categoryClass;
+	}
+
+	public void setCategoryClass(Category categoryClass) {
+		this.categoryClass = categoryClass;
 	}
 
 }

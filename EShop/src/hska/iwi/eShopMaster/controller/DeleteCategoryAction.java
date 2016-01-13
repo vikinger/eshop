@@ -1,7 +1,7 @@
 package hska.iwi.eShopMaster.controller;
 
-import hska.iwi.eShopMaster.model.businessLogic.manager.CategoryManager;
-import hska.iwi.eShopMaster.model.businessLogic.manager.impl.CategoryManagerImpl;
+import hska.iwi.eShopMaster.model.businessLogic.manager.ProductManager;
+import hska.iwi.eShopMaster.model.businessLogic.manager.impl.ProductManagerImpl;
 import hska.iwi.eShopMaster.model.database.dataobjects.Category;
 import hska.iwi.eShopMaster.model.database.dataobjects.User;
 
@@ -31,11 +31,11 @@ public class DeleteCategoryAction extends ActionSupport {
 		if(user != null && (user.getRole().getTyp().equals("admin"))) {
 
 			// Helper inserts new Category in DB:
-			CategoryManager categoryManager = new CategoryManagerImpl();
+			ProductManager productManager = new ProductManagerImpl();
 		
-			categoryManager.delCategoryById(catId);
+			productManager.delCategoryById(catId);
 
-			categories = categoryManager.getCategories();
+			categories = productManager.getCategories();
 				
 			res = "success";
 

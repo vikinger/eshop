@@ -1,28 +1,13 @@
 package hska.iwi.eShopMaster.model.database.dataobjects;
 
-
 import java.util.HashSet;
 import java.util.Set;
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
 
-/**
- * This class contains details about categories.
- */
-@Entity
-@Table(name = "category")
-public class Category implements java.io.Serializable {
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class Category {
+
 	private int id;
 	private String name;
 	private Set<Product> products = new HashSet<Product>(0);
@@ -39,9 +24,6 @@ public class Category implements java.io.Serializable {
 		this.products = products;
 	}
 
-	@Id
-	@GeneratedValue
-	@Column(name = "id", nullable = false)
 	public int getId() {
 		return this.id;
 	}
@@ -50,7 +32,6 @@ public class Category implements java.io.Serializable {
 		this.id = id;
 	}
 
-	@Column(name = "name", nullable = false)
 	public String getName() {
 		return this.name;
 	}
@@ -58,8 +39,7 @@ public class Category implements java.io.Serializable {
 	public void setName(String name) {
 		this.name = name;
 	}
-
-	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "category")
+	
 	public Set<Product> getProducts() {
 		return this.products;
 	}

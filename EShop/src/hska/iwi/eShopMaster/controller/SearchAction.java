@@ -1,8 +1,6 @@
 package hska.iwi.eShopMaster.controller;
 
-import hska.iwi.eShopMaster.model.businessLogic.manager.CategoryManager;
 import hska.iwi.eShopMaster.model.businessLogic.manager.ProductManager;
-import hska.iwi.eShopMaster.model.businessLogic.manager.impl.CategoryManagerImpl;
 import hska.iwi.eShopMaster.model.businessLogic.manager.impl.ProductManagerImpl;
 import hska.iwi.eShopMaster.model.database.dataobjects.Category;
 import hska.iwi.eShopMaster.model.database.dataobjects.Product;
@@ -46,8 +44,8 @@ public class SearchAction extends ActionSupport{
 			this.products = productManager.getProductsForSearchValues(this.searchDescription, this.searchMinPrice, this.searchMaxPrice);
 			
 			// Show all categories:
-			CategoryManager categoryManager = new CategoryManagerImpl();
-			this.categories = categoryManager.getCategories();
+//			CategoryManager categoryManager = new CategoryManagerImpl();
+			this.categories = productManager.getCategories();
 			result = "success";
 		}
 		
