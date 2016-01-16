@@ -14,7 +14,7 @@ import hska.iwi.eShopMaster.model.database.dataobjects.Product;
 @Repository
 public class ProductManagerImpl implements ProductManager {
 
-	private static final String BASE_URI = "http://localhost:8040";
+	private static final String BASE_URI = "http://localhost:8081/product-api";
 	private static final String PRODUCT_URI = BASE_URI + "/product";
 	private static final String CATEGORY_URI = BASE_URI + "/category";
     private static RestTemplate restTemplate = new RestTemplate();

@@ -11,7 +11,7 @@ import hska.iwi.eShopMaster.model.database.dataobjects.User;
 
 public class UserManagerImpl implements UserManager {
 
-	private static final String BASE_URI = "http://localhost:8020";
+	private static final String BASE_URI = "http://localhost:8081/user-api";
 	private static final String USER_URI = BASE_URI + "/user";
 	private static final String ROLE_URI = BASE_URI + "/role";
     private static RestTemplate restTemplate = new RestTemplate();
